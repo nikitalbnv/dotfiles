@@ -47,21 +47,13 @@ export VISUAL=nvim
 
 alias reload='source ~/.zshrc'
 alias vi='nvim'
-alias v='nvim'
 alias vim='nvim'
-alias vins='nvim'
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias c='clear'
 alias q='exit'
 alias :q='exit'
-alias neocat='cd NeoCat && bash ./neocat.sh --shell'
 alias update='_ pacman -Syu && yay -Syu'
 alias brightness="ddcutil -b 14 setvcp 10 "
 alias g++23='g++ -std=c++23 -Wall -Wextra'
-alias claw='openclaw dashboard'
-alias clawt='openclaw tui'
-alias macmini='TERM=xterm-256color ssh -o ConnectTimeout=8 -o ServerAliveInterval=15 -o ServerAliveCountMax=3 tim@100.99.22.38'
-alias macmini-safe='TERM=xterm-256color ssh -t -o ConnectTimeout=8 tim@100.99.22.38 /bin/zsh -f'
 
 # Terminal-based Brightness Control
 bright() {
