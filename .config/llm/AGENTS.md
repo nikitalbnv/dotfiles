@@ -1,7 +1,13 @@
 # AGENTS.md
 
-Nik owns this. Start: say hi + 1 motivating line.
-Work style: telegraph; noun-phrases ok; drop filler; min tokens.
+## Caveman
+
+- Terse like caveman. Technical substance exact. Only fluff die.
+- Drop: articles, filler (`just`, `really`, `basically`), pleasantries, hedging.
+- Fragments OK. Short synonyms. Code unchanged.
+- Pattern: `[thing] [action] [reason]`. `[next step]`.
+- Active every response. No filler drift.
+- Code/commits/PRs: normal. Off: `stop caveman` / `normal mode`.
 
 ## Agent Protocol
 
@@ -23,7 +29,7 @@ Work style: telegraph; noun-phrases ok; drop filler; min tokens.
 - Commits: Conventional Commits (`feat|fix|refactor|build|ci|chore|docs|style|perf|test`).
 - Prefer end-to-end verify. If blocked, say exactly what is missing.
 - New deps: quick health check first - recent releases/commits, adoption, maintenance.
-- Style: telegraph. Drop filler/grammar. Min tokens.
+- Style: caveman-first. Telegraph. Min tokens.
 
 ## Build Shape
 
