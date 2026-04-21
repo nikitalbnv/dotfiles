@@ -57,12 +57,18 @@ alias g++23='g++ -std=c++23 -Wall -Wextra'
 
 # Terminal-based Brightness Control
 bright() {
-    # If no arguments, show current brightness
     if [ -z "$1" ]; then
         ddcutil -b 14 getvcp 10
+        brightnessctl get
     else
-        # Arguments can be: '50', '+ 10', or '- 10'
         ddcutil -b 14 setvcp 10 "$@"
+        if [ "$1" = "+" ]; then
+            brightnessctl set "+${2}%"
+        elif [ "$1" = "-" ]; then
+            brightnessctl set "${2}%-"
+        else
+            brightnessctl set "${1}%"
+        fi
     fi
 }
 . "$HOME/.local/share/../bin/env"
