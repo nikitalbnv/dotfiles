@@ -14,7 +14,7 @@
     "pulseaudio",
     "battery",
     "custom/timer",
-    "clock",
+    "custom/clock",
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -59,29 +59,10 @@
     "interval": 1,
   },
 
-  "clock": {
-    "format": "{:%a %b %d, %I:%M %p}",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "calendar": {
-      "mode": "year",
-      "mode-mon-col": 3,
-      "weeks-pos": "right",
-      "on-scroll": 1,
-      "format": {
-        "months": "<span foreground='#fabd2f'><b>{}</b></span>",
-        "days": "<span foreground='#d3869b'><b>{}</b></span>",
-        "weeks": "<span foreground='#8ec07c'><b>W{}</b></span>",
-        "weekdays": "<span foreground='#fe8019'><b>{}</b></span>",
-        "today": "<span foreground='#fb4934'><b><u>{}</u></b></span>",
-      },
-    },
-    "actions": {
-      "on-click-right": "mode",
-      "on-scroll-up": "tz_up",
-      "on-scroll-down": "tz_down",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down",
-    },
+  "custom/clock": {
+    "exec": "TZ=America/Vancouver date '+%a %b %d, %I:%M %p'",
+    "interval": 1,
+    "tooltip": false,
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
@@ -110,6 +91,7 @@
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
     "interval": 5,
     "on-click": "omarchy-menu power",
+    "on-click-right": "notify-send -u low \"$(omarchy-battery-status)\"",
     "states": {
       "warning": 20,
       "critical": 10,
@@ -137,7 +119,7 @@
     },
   },
   "custom/screenrecording-indicator": {
-    "on-click": "omarchy-cmd-screenrecord",
+    "on-click": "omarchy-capture-screenrecording",
     "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
     "signal": 8,
     "return-type": "json",

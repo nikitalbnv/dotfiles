@@ -44,6 +44,7 @@ bindkey '^[[1;5C' forward-word        # Ctrl+Right
 # ========================
 export EDITOR=nvim
 export VISUAL=nvim
+export PATH="$HOME/bin:$PATH"
 
 alias reload='source ~/.zshrc'
 alias vi='nvim'
