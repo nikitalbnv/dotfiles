@@ -46,26 +46,6 @@
 - Keep notes short; update docs when behavior/API/workflow changes.
 - For tiny doc/config edits: do the work directly. No heavyweight planning ritual.
 
-## Resume Targeting
-
-- For junior/new-grad Go backend resumes, front-load HIGH keywords in first half of page one: Go/Golang, REST APIs, Git, SQL, PostgreSQL, Docker, microservices, AWS, CI/CD, unit testing, Agile/Scrum, code reviews, collaboration/teamwork.
-- For full-stack resumes, write bullets at roughly 6th grade reading level: plain business outcome first, then supported keywords. Make outcomes crystal clear to non-technical readers with no company/product context.
-- Keep most resume bullets near 1-2 rendered lines; allow a strong first/company-defining bullet to hit 3 lines when it adds business clarity and high-value keywords. Do not pad weak bullets.
-- Prefer meaningful business outcomes over vanity metrics. Avoid low-signal numbers like endpoint counts, test counts, or table counts unless the job posting clearly rewards them or the number proves scale in plain language.
-- Avoid saying advisors apply for insurance. Better frame: advisors help customers apply for life insurance online; customers apply; teams review applications.
-- Do not repeat the same resume action verb across one resume. Use `Built` at most once in the whole resume; vary starts like Created, Developed, Shipped, Added, Improved, Turned, Automated, Supported.
-- Do not repeat the same skill inside one experience section unless the job posting requires it; use each key skill once per job when practical.
-- Avoid `Led` in resume bullets unless user explicitly asks. Reframe leadership as implementation, coordination, business requirements, collaboration, or team delivery experience.
-- Put at least 75% of HIGH keywords in actual work/project bullets, not only Technical Skills.
-- For Vero Ventures resume bullets, include evidence-backed terms when true: microservices, REST APIs, PostgreSQL, Docker, GitHub Actions CI/CD, Agile sprint cycles, goroutines, Kafka, observability.
-- Use exact JD wording when supported: `unit testing`, not vague `automated testing`; include `Git` explicitly.
-- Collapse Technical Skills into compact comma-separated lines when space matters; avoid category labels if they waste lines.
-- Drop low-signal/internal-only bullets before cutting strong backend bullets.
-- Avoid non-keyword implementation details like `Drizzle` unless target role asks for them.
-- Keep unsupported keywords out unless evidence exists: Kubernetes, gRPC, Protobuf, GCP, Azure, WebSockets, Elasticsearch, Rust, Solidity/Web3, C++.
-- When asked to personalize a resume to a job posting: parse JD hamburgers/hot dogs first, choose closest base resume, create `outputs/<company>/nikita_lobanov_resume.md`, add a content test before editing, front-load supported JD keywords in bullets, keep unsupported keywords out, render `outputs/<company>/nikita_lobanov_resume.pdf`, then verify tests, typecheck, page count, PDF text contains target terms, and PDF text omits unsupported terms.
-- For job-specific resume outputs, use company folder under current resume project `outputs/` unless user explicitly gives an absolute path.
-
 ## Agent Skills
 
 - OpenCode skills come from `~/.config/opencode/agent-skills/skills` via `~/.agents/skills/agent-skills`.
