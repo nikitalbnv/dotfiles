@@ -2,9 +2,9 @@ general.import = [ "~/.local/state/omarchy/current/theme/alacritty.toml" ]
 
 
 [font]
-normal = { family = "JetBrainsMonoNL Nerd Font" }
-bold = { family = "JetBrainsMonoNL Nerd Font" }
-italic = { family = "JetBrainsMonoNL Nerd Font" }
+normal = { family = "MesloLGS Nerd Font" }
+bold = { family = "MesloLGS Nerd Font" }
+italic = { family = "MesloLGS Nerd Font" }
 size = 9
 
 [window]
