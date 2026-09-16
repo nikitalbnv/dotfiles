@@ -1,11 +1,11 @@
-general.import = [ "~/.config/omarchy/current/theme/alacritty.toml" ]
+general.import = [ "~/.local/state/omarchy/current/theme/alacritty.toml" ]
 
 
 [font]
 normal = { family = "JetBrainsMonoNL Nerd Font" }
 bold = { family = "JetBrainsMonoNL Nerd Font" }
 italic = { family = "JetBrainsMonoNL Nerd Font" }
-size = 13
+size = 9
 
 [window]
 padding.x = 0
@@ -17,7 +17,10 @@ bindings = [
 { key = "F11", action = "ToggleFullscreen" },
 { key = "Insert", mods = "Shift", action = "Paste" },
 { key = "Insert", mods = "Control", action = "Copy" },
-  { key = "Return", mods = "Shift", chars = "\u001B\r" },
+  # Send Shift+Return as CSI-u so TUIs can distinguish it from Return without treating it as Alt+Return.
+  { key = "Return", mods = "Shift", chars = "\u001B[13;2u" },
+  # Legacy encoding sends Alt+Shift+Return the same as Alt+Return; send CSI-u so tmux can match M-S-Enter.
+  { key = "Return", mods = "Alt|Shift", chars = "\u001B[13;4u" }
 #save_to_clipboard
  { key = "C", mods = "Control|Shift", action = "Copy" },
   { key = "V", mods = "Control", action = "Paste" },

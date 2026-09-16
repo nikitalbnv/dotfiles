@@ -1,9 +1,9 @@
 # Dynamic theme colors
-config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
+config-file = ?"~/.local/state/omarchy/current/theme/ghostty.conf"
 
 # Font
-font-family = OMARCHY
-font-size = 14
+font-family = "JetBrainsMono Nerd Font"
+font-size = 9
 
 adjust-cell-height=-5%
 
@@ -15,9 +15,14 @@ resize-overlay = never
 
 
 # Keyboard bindings
+# Ghostty's built-in default (toggle_fullscreen) was eating Ctrl+Enter before
+# it ever reached tmux, which now uses Ctrl+Enter as its prefix key.
+keybind = ctrl+enter=unbind
 keybind = ctrl+backspace=text:\x17
+keybind = ctrl+delete=text:\x1b[3~
 keybind = ctrl+shift+c=copy_to_clipboard
 keybind = ctrl+v=paste_from_clipboard
+keybind = shift+insert=paste_from_selection
 keybind = shift+enter=text:\x1b\r
 
 # Slowdown mouse scrolling
@@ -28,3 +33,6 @@ mouse-scroll-multiplier = 0.95
 
 # Keep notifications without asking the compositor to focus the window.
 bell-features = system,title,no-attention
+
+# Legacy encoding sends Alt+Shift+Enter the same as Alt+Enter; send CSI-u so tmux can match M-S-Enter.
+keybind = alt+shift+enter=csi:13;4u

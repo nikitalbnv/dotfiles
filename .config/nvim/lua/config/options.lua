@@ -1,3 +1,4 @@
+require("config.remote_clipboard").setup()
 -- Add local bin to PATH for fd symlink
 vim.env.PATH = vim.fn.stdpath("config") .. "/bin:" .. vim.env.PATH
 
